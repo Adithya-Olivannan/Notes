@@ -3,7 +3,7 @@ Source : https://www.playframework.com/documentation/3.0.x/Anatomy
 ### Application Layout
 
 This is the typical layout of a PLAY application. You will find some similarities with SpryPoint's SpryEngage and SpryCIS source code.
-
+```
 app                      → Application sources
  └ assets                → Compiled asset sources
     └ stylesheets        → Typically LESS CSS sources
@@ -36,28 +36,28 @@ target                   → Generated stuff
  └ universal             → Application packaging
  └ web                   → Compiled web assets
 test
-
+```
 
 ### Explanations / Unknown terms
 
-Terms:
+##Terms:
 Model View Controller (MVC) : It's a software architectural pattern. Model manages the data, business logic and rules. View handles what the user sees. Controller connects the model and view - handles requests and returns responses. [Resource] : https://www.youtube.com/watch?v=DUg2SWWK18I&pp=ygUVbW9kZWwgdmlldyBjb250cm9sbGVy
 
-Q/A's:
+##Q/A's:
 
-Q: You will find .less files inside the app/assets folder in the SpryEngage repo. What are these? Why should we use these?
+#Q: You will find .less files inside the app/assets folder in the SpryEngage repo. What are these? Why should we use these?
 A: .less file contains enhanced CSS syntax. It gets compiled into standard .css before it's used in a browser. It provides reusable code via mixins and allows for logic like conditions and loops if needed. 
 
-Q: What are application controllers?
+#Q: What are application controllers?
 A: Scala / Java classes that handle incoming HTTP requests and return responses. Controllers communicate with Model and View, Model and View never have to communicate within themselves.
 
-Q: What are application business layers / models?
+#Q: What are application business layers / models?
 A: Core logic and data management lives here. Example of a business logic would be a function like : isEmailValid() that checks if an entered email address is valid. 
 
-Q: What are templates / views?
+#Q: What are templates / views?
 A: This is what the user sees. This could be HTML / css or something like that.
 
-Q: What is the conf/routes file?
+#Q: What is the conf/routes file?
 A: This defines the URL routing table for the web application. It contains fields in the following format:
 Method    Path    Controller Method
 For example : GET    /hello    controllers.HomeController.sayHello
@@ -88,5 +88,5 @@ And in your hello.scala.html, you will have:
 
 Now, you can do : localhost:9000/hello?name=Adithya and you should get a heading saying "Hello Adithya"
 
-Q: What are templates?
+#Q: What are templates?
 A:
